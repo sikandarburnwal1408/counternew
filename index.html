@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        background-color: bisque;
+        display: grid;
+        grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr;
+        grid-template-rows: 1fr;
+    }
+
+    button {
+        background-color: rgb(23, 115, 18);
+        width: 35px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .container {
+        grid-template-columns: auto;
+        display: inline-block;
+        border: 2px solid rgb(10, 53, 14);
+        width: 130px;
+        height: 100px;
+        margin-top: 10px;
+        font-size: larger;
+        background-color: rgb(40, 171, 48);
+        text-align: center;
+    }
+    .contain{
+        align-items: center;
+        text-align: center;
+        background-color: rgb(234, 54, 54);
+        display: grid;
+        grid-template-columns: 0.33fr 0.33fr 0.33fr;
+    }
+    .divi{
+        width: 10px;
+        align-items: center;
+    }
+    p{
+        color: rgb(34, 20, 229);
+        font-weight: 700;
+        background-color: rgb(255, 255, 255);
+    }
+    .divi {
+        align-items: center;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="contain">
+            <div class="divi" id="bus1"></div>
+            <div class="divi" id="bus2"></div>
+            <div class="divi" id="bus3"></div>
+        </div>
+        <p>BUS</p>
+        <button id="l1">L</button>
+        <button id="t1">T</button>
+        <button id="r1">R</button>
+    </div>
+    <div class="container">
+        <div class="contain">
+            <div class="divi" id="car1"></div>
+            <div class="divi" id="car2"></div>
+            <div class="divi" id="car3"></div>
+        </div>
+        <p>CAR</p>
+        <button id="l2">L</button>
+        <button id="t2">T</button>
+        <button id="r2">R</button>
+    </div>
+    <div class="container">
+        <div class="contain">
+            <div class="divi" id="lcv1"></div>
+            <div class="divi" id="lcv2"></div>
+            <div class="divi" id="lcv3"></div>
+        </div>
+        <p>LCV</p>
+        <button id="l3">L</button>
+        <button id="t3">T</button>
+        <button id="r3">R</button>
+    </div>
+    <div class="container">
+        <div class="contain">
+            <div class="divi" id="hcv1"></div>
+            <div class="divi" id="hcv2"></div>
+            <div class="divi" id="hcv3"></div>
+        </div>
+        <p>HCV</p>
+        <button id="l4">L</button>
+        <button id="t4">T</button>
+        <button id="r4">R</button>
+    </div>
+    <div class="container">
+        <div class="contain">
+            <div class="divi" id="bike1"></div>
+            <div class="divi" id="bike2"></div>
+            <div class="divi" id="bike3"></div>
+        </div>
+        <p>BIKE</p>
+        <button id="l5">L</button>
+        <button id="t5">T</button>
+        <button id="r5">R</button>
+    </div>
+    <div class="container">
+        <div class="contain">
+            <div class="divi" id="rickshaw1"></div>
+            <div class="divi" id="rickshaw2"></div>
+            <div class="divi" id="rickshaw3"></div>
+        </div>
+        <p>RICKSHAW</p>
+        <button id="l6">L</button>
+        <button id="t6">T</button>
+        <button id="r6">R</button>
+    </div>
+    <div class="container">
+        <div class="contain">
+            <div class="divi" id="3w1"></div>
+            <div class="divi" id="3w2"></div>
+            <div class="divi" id="3w3"></div>
+        </div>
+        <p>3W</p>
+        <button id="l7">L</button>
+        <button id="t7">T</button>
+        <button id="r7">R</button>
+    </div>
+    <div class="container">
+        <div class="contain">
+            <div class="divi" id="cycle1"></div>
+            <div class="divi" id="cycle2"></div>
+            <div class="divi" id="cycle3"></div>
+        </div>
+        <p>CYCLE</p>
+        <button id="l8">L</button>
+        <button id="t8">T</button>
+        <button id="r8">R</button>
+    </div>
+  
+</body>
+<script>
+    let bus1 = document.getElementById('bus1');
+    let bus2 = document.getElementById('bus2');
+    let bus3 = document.getElementById('bus3');
+    let car1 = document.getElementById('car1');
+    let car2 = document.getElementById('car2');
+    let car3 = document.getElementById('car3');
+    let lcv1 = document.getElementById('lcv1');
+    let lcv2 = document.getElementById('lcv2');
+    let lcv3 = document.getElementById('lcv3');
+    let hcv1 = document.getElementById('hcv1');
+    let hcv2 = document.getElementById('hcv2');
+    let hcv3 = document.getElementById('hcv3');
+    let bike1 = document.getElementById('bike1');
+    let bike2 = document.getElementById('bike2');
+    let bike3 = document.getElementById('bike3');
+    let rickshaw1 = document.getElementById('rickshaw1');
+    let rickshaw2 = document.getElementById('rickshaw2');
+    let rickshaw3 = document.getElementById('rickshaw3');
+    let tw1 = document.getElementById('3w1');
+    let tw2 = document.getElementById('3w2');
+    let tw3 = document.getElementById('3w3');
+    let cycle1 = document.getElementById('cycle1');
+    let cycle2 = document.getElementById('cycle2');
+    let cycle3 = document.getElementById('cycle3');
+    let l1 = document.getElementById('l1');
+    let t1 = document.getElementById('t1');
+    let r1 = document.getElementById('r1');
+    let l2 = document.getElementById('l2');
+    let t2 = document.getElementById('t2');
+    let r2 = document.getElementById('r2');
+    let l3 = document.getElementById('l3');
+    let t3 = document.getElementById('t3');
+    let r3 = document.getElementById('r3');
+    let l4 = document.getElementById('l4');
+    let t4 = document.getElementById('t4');
+    let r4 = document.getElementById('r4');
+    let l5 = document.getElementById('l5');
+    let t5 = document.getElementById('t5');
+    let r5 = document.getElementById('r5');
+    let l6 = document.getElementById('l6');
+    let t6 = document.getElementById('t6');
+    let r6 = document.getElementById('r6');
+    let l7 = document.getElementById('l7');
+    let t7 = document.getElementById('t7');
+    let r7 = document.getElementById('r7');
+    let l8 = document.getElementById('l8');
+    let t8 = document.getElementById('t8');
+    let r8 = document.getElementById('r8');
+    
+    let c11=0, c12=0, c13=0;
+    let c21=0, c22=0, c23=0;
+    let c31=0, c32=0, c33=0;
+    let c41=0, c42=0, c43=0;
+    let c51=0, c52=0, c53=0;
+    let c61=0, c62=0, c63=0;
+    let c71=0, c72=0, c73=0;
+    let c81=0, c82=0, c83=0;
+    // window.addEventListener('keydown', (e) => {
+    //     switch (e.key) {
+    //         case "ArrowUp":
+    //             c1 = c1 + 1;
+    //             bus.innerText = c1;
+    //             break;
+    //         case "ArrowDown":
+    //             c1 = c1 - 1;
+    //             if(c1<0){
+    //                 alert("Bus count cannot be negative");
+    //             }
+    //             bus.innerText = c1;
+    //             break;
+    //         case "ArrowRight":
+    //             c2 = c2 + 1;
+    //             car.innerText = c2;
+    //             break;
+    //         case "ArrowLeft":
+    //             c2 = c2 - 1;
+    //             if(c2<0){
+    //                 alert("Car count cannot be negative");
+    //             }
+    //             car.innerText = c2;
+    //             break;
+    //     }
+    // })
+    // bus
+    l1.addEventListener('click', () => {
+        c11 = c11 + 1;
+        bus1.innerHTML = c11;
+    })
+    t1.addEventListener('click', () => {
+        c12 = c12 + 1;
+        bus2.innerHTML = c12;
+    })
+    r1.addEventListener('click', () => {
+        c13 = c13 + 1;
+        bus3.innerHTML = c13;
+    })
+    // car
+    l2.addEventListener('click', () => {
+        c21 = c21 + 1;
+        car1.innerHTML = c21;
+    })
+    t2.addEventListener('click', () => {
+        c22 = c22 + 1;
+        car2.innerHTML = c22;
+    })
+    r2.addEventListener('click', () => {
+        c23 = c23 + 1;
+        car3.innerHTML = c23;
+    })
+    // lcv
+    l3.addEventListener('click', () => {
+        c31 = c31 + 1;
+        lcv1.innerHTML = c31;
+    })
+    t3.addEventListener('click', () => {
+        c32 = c32 + 1;
+        lcv2.innerHTML = c32;
+    })
+    r3.addEventListener('click', () => {
+        c33 = c33 + 1;
+        lcv3.innerHTML = c33;
+    })
+    // hcv
+    l4.addEventListener('click', () => {
+        c41 = c41 + 1;
+        hcv1.innerHTML = c41;
+    })
+    t4.addEventListener('click', () => {
+        c42 = c42 + 1;
+        hcv2.innerHTML = c42;
+    })
+    r4.addEventListener('click', () => {
+        c43 = c43 + 1;
+        hcv3.innerHTML = c43;
+    })
+    // bike
+    l5.addEventListener('click', () => {
+        c51 = c51 + 1;
+        bike1.innerHTML = c51;
+    })
+    t5.addEventListener('click', () => {
+        c52 = c52 + 1;
+        bike2.innerHTML = c52;
+    })
+    r5.addEventListener('click', () => {
+        c53 = c53 + 1;
+        bike3.innerHTML = c53;
+    })
+    // rickshaw
+    l6.addEventListener('click', () => {
+        c61 = c61 + 1;
+        rickshaw1.innerHTML = c61;
+    })
+    t6.addEventListener('click', () => {
+        c62 = c62 + 1;
+        rickshaw2.innerHTML = c62;
+    })
+    r6.addEventListener('click', () => {
+        c63 = c63 + 1;
+        rickshaw3.innerHTML = c63;
+    })
+    // 3w
+    l7.addEventListener('click', () => {
+        c71 = c71 + 1;
+        tw1.innerHTML = c71;
+    })
+    t7.addEventListener('click', () => {
+        c72 = c72 + 1;
+        tw2.innerHTML = c72;
+    })
+    r7.addEventListener('click', () => {
+        c73 = c73 + 1;
+        tw3.innerHTML = c73;
+    })
+    // cycle
+    l8.addEventListener('click', () => {
+        c81 = c81 + 1;
+        cycle1.innerHTML = c81;
+    })
+    t8.addEventListener('click', () => {
+        c82 = c82 + 1;
+        cycle2.innerHTML = c82;
+    })
+    r8.addEventListener('click', () => {
+        c83 = c83 + 1;
+        cycle3.innerHTML = c83;
+    })
+    
+</script>
+
+</html>
