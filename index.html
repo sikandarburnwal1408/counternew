@@ -11,6 +11,7 @@
     * {
         margin: 0px;
         padding: 0px;
+        align-items: center;
     }
 
     body {
@@ -111,7 +112,7 @@
             <div class="divi" id="bike2"></div>
             <div class="divi" id="bike3"></div>
         </div>
-        <p>RICKSHAW</p>
+        <p>3W</p>
         <button id="l5">L</button>
         <button id="t5">T</button>
         <button id="r5">R</button>
@@ -122,7 +123,7 @@
             <div class="divi" id="rickshaw2"></div>
             <div class="divi" id="rickshaw3"></div>
         </div>
-        <p>3W</p>
+        <p>RICKSHAW</p>
         <button id="l6">L</button>
         <button id="t6">T</button>
         <button id="r6">R</button>
@@ -148,6 +149,39 @@
         <button id="l8">L</button>
         <button id="t8">T</button>
         <button id="r8">R</button>
+    </div>
+    <div class="container">
+        <div class="contain">
+            <div class="divi" id="ac1"></div>
+            <div class="divi" id="ac2"></div>
+            <div class="divi" id="ac3"></div>
+        </div>
+        <p>AC</p>
+        <button id="l9">L</button>
+        <button id="t9">T</button>
+        <button id="r9">R</button>
+    </div>
+    <div class="container">
+        <div class="contain">
+            <div class="divi" id="nac1"></div>
+            <div class="divi" id="nac2"></div>
+            <div class="divi" id="nac3"></div>
+        </div>
+        <p>NON-AC</p>
+        <button id="l10">L</button>
+        <button id="t10">T</button>
+        <button id="r10">R</button>
+    </div>
+    <div class="container">
+        <div class="contain">
+            <div class="divi" id="tv1"></div>
+            <div class="divi" id="tv2"></div>
+            <div class="divi" id="tv3"></div>
+        </div>
+        <p>TRAVELLER</p>
+        <button id="l11">L</button>
+        <button id="t11">T</button>
+        <button id="r11">R</button>
     </div>
   
 </body>
@@ -176,6 +210,17 @@
     let cycle1 = document.getElementById('cycle1');
     let cycle2 = document.getElementById('cycle2');
     let cycle3 = document.getElementById('cycle3');
+    let ac1 = document.getElementById('ac1');
+    let ac2 = document.getElementById('ac2');
+    let ac3 = document.getElementById('ac3');
+    let nc1 = document.getElementById('nac1');
+    let nc2 = document.getElementById('nac2');
+    let nc3 = document.getElementById('nac3');
+    let tv1 = document.getElementById('tv1');
+    let tv2 = document.getElementById('tv2');
+    let tv3 = document.getElementById('tv3');
+
+
     let l1 = document.getElementById('l1');
     let t1 = document.getElementById('t1');
     let r1 = document.getElementById('r1');
@@ -200,6 +245,15 @@
     let l8 = document.getElementById('l8');
     let t8 = document.getElementById('t8');
     let r8 = document.getElementById('r8');
+    let l9 = document.getElementById('l9');
+    let t9 = document.getElementById('t9');
+    let r9 = document.getElementById('r9');
+    let l10 = document.getElementById('l10');
+    let t10 = document.getElementById('t10');
+    let r10 = document.getElementById('r10');
+    let l11 = document.getElementById('l11');
+    let t11 = document.getElementById('t11');
+    let r11 = document.getElementById('r11');
     
     let c11=0, c12=0, c13=0;
     let c21=0, c22=0, c23=0;
@@ -209,6 +263,9 @@
     let c61=0, c62=0, c63=0;
     let c71=0, c72=0, c73=0;
     let c81=0, c82=0, c83=0;
+    let c91=0, c92=0, c93=0;
+    let c101=0, c102=0, c103=0;
+    let c111=0, c112=0, c113=0;
     // window.addEventListener('keydown', (e) => {
     //     switch (e.key) {
     //         case "ArrowUp":
@@ -338,6 +395,45 @@
     r8.addEventListener('click', () => {
         c83 = c83 + 1;
         cycle3.innerHTML = c83;
+    })
+    // AC
+    l9.addEventListener('click', () => {
+        c91 = c91 + 1;
+        ac1.innerHTML = c91;
+    })
+    t9.addEventListener('click', () => {
+        c92 = c92 + 1;
+        ac2.innerHTML = c92;
+    })
+    r9.addEventListener('click', () => {
+        c93 = c93 + 1;
+        ac3.innerHTML = c93;
+    })
+    // Non AC
+    l10.addEventListener('click', () => {
+        c101 = c101 + 1;
+        nc1.innerHTML = c101;
+    })
+    t10.addEventListener('click', () => {
+        c102 = c102 + 1;
+        nc2.innerHTML = c102;
+    })
+    r10.addEventListener('click', () => {
+        c103 = c103 + 1;
+        nc3.innerHTML = c103;
+    })
+    // Travellers
+    l11.addEventListener('click', () => {
+        c111 = c111 + 1;
+        tv1.innerHTML = c111;
+    })
+    t11.addEventListener('click', () => {
+        c112 = c112 + 1;
+        tv2.innerHTML = c112;
+    })
+    r11.addEventListener('click', () => {
+        c113 = c113 + 1;
+        tv3.innerHTML = c113;
     })
     
 </script>
